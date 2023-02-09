@@ -1,4 +1,7 @@
-package pl.sdacademy.java.oopschool;
+package pl.sdacademy.java.oopschool.student.infrastructure;
+
+import pl.sdacademy.java.oopschool.student.domain.Student;
+import pl.sdacademy.java.oopschool.student.domain.StudentDataProvider;
 
 import java.util.List;
 import java.util.UUID;

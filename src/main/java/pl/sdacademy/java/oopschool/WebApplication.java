@@ -3,6 +3,7 @@ package pl.sdacademy.java.oopschool;
 import io.javalin.Javalin;
 import io.javalin.http.HandlerType;
 import io.javalin.http.HttpStatus;
+import pl.sdacademy.java.oopschool.student.domain.StudentService;
 
 import java.util.UUID;
 

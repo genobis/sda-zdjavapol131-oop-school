@@ -1,4 +1,4 @@
-package pl.sdacademy.java.oopschool;
+package pl.sdacademy.java.oopschool.student.domain;
 
 import java.util.UUID;
 
