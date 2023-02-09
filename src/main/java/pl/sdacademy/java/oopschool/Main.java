@@ -2,8 +2,15 @@ package pl.sdacademy.java.oopschool;
 
 public class Main {
     public static void main(String[] args) {
-        CsvStudentService csvStudentService = new CsvStudentService();
+        StudentService studentService = new StudentService(
+            new CsvStudentDataProvider()
+        );
 
-        new WebApplication(csvStudentService).start();
+        //alternatywnie
+//        StudentService studentService = new StudentService(
+//            new InMemoryStudentDataProvider()
+//        );
+
+        new WebApplication(studentService).start();
     }
 }

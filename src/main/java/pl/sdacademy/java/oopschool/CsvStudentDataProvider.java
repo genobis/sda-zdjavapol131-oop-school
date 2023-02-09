@@ -6,21 +6,12 @@ import org.slf4j.LoggerFactory;
 import java.io.IOException;
 import java.util.*;
 
-public class CsvStudentService {
-    private final Logger logger = LoggerFactory.getLogger(CsvStudentService.class);
+public class CsvStudentDataProvider implements StudentDataProvider {
+    private final Logger logger = LoggerFactory.getLogger(CsvStudentDataProvider.class);
 
-    public List<Student> getStudents() {
-        return loadStudents();
-    }
-
-    public Optional<Student> getStudent(UUID uuid) {
-        return loadStudents().stream()
-            .filter(student -> uuid.equals(student.uuid()))
-            .findAny();
-    }
-
-    private List<Student> loadStudents() {
-        try(var studentCsvStream = CsvStudentService.class.getResourceAsStream("/students.csv")) {
+    @Override
+    public List<Student> getData() {
+        try(var studentCsvStream = CsvStudentDataProvider.class.getResourceAsStream("/students.csv")) {
             if (studentCsvStream == null) {
                 return Collections.emptyList();
             }
