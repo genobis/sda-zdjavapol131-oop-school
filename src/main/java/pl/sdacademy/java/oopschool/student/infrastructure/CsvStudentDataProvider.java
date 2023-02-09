@@ -3,12 +3,12 @@ package pl.sdacademy.java.oopschool.student.infrastructure;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import pl.sdacademy.java.oopschool.student.domain.Student;
-import pl.sdacademy.java.oopschool.student.domain.StudentDataProvider;
+import pl.sdacademy.java.oopschool.DataProvider;
 
 import java.io.IOException;
 import java.util.*;
 
-public class CsvStudentDataProvider implements StudentDataProvider {
+public class CsvStudentDataProvider implements DataProvider<Student> {
     private final Logger logger = LoggerFactory.getLogger(CsvStudentDataProvider.class);
 
     @Override

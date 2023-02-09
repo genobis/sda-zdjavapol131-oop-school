@@ -1,12 +1,12 @@
 package pl.sdacademy.java.oopschool.student.infrastructure;
 
 import pl.sdacademy.java.oopschool.student.domain.Student;
-import pl.sdacademy.java.oopschool.student.domain.StudentDataProvider;
+import pl.sdacademy.java.oopschool.DataProvider;
 
 import java.util.List;
 import java.util.UUID;
 
-public class InMemoryStudentDataProvider implements StudentDataProvider {
+public class InMemoryStudentDataProvider implements DataProvider<Student> {
     @Override
     public List<Student> getData() {
         return List.of(

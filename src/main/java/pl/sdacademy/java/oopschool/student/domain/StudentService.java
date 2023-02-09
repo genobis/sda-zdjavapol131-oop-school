@@ -1,14 +1,16 @@
 package pl.sdacademy.java.oopschool.student.domain;
 
+import pl.sdacademy.java.oopschool.DataProvider;
+
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
 public class StudentService {
     // Kompozycja - użycie wzorca Strategia
-    private final StudentDataProvider studentDataProvider;
+    private final DataProvider<Student> studentDataProvider;
 
-    public StudentService(StudentDataProvider studentDataProvider) {
+    public StudentService(DataProvider<Student> studentDataProvider) {
         this.studentDataProvider = studentDataProvider;
     }
 
