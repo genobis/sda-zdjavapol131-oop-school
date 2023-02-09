@@ -7,7 +7,10 @@ import pl.sdacademy.java.oopschool.student.infrastructure.CsvStudentDataProvider
 public class Main {
     public static void main(String[] args) {
         StudentService studentService = new StudentService(
-            new CachingStudentDataProvider()
+            //Wzorzec dekorator
+            new CachingStudentDataProvider(
+                new CsvStudentDataProvider()
+            )
         );
 
         //alternatywnie
