@@ -2,8 +2,8 @@ package pl.sdacademy.java.oopschool;
 
 public class Main {
     public static void main(String[] args) {
-        InMemoryStudentService inMemoryStudentService = new InMemoryStudentService();
+        CsvStudentService csvStudentService = new CsvStudentService();
 
-        new WebApplication(inMemoryStudentService).start();
+        new WebApplication(csvStudentService).start();
     }
 }
